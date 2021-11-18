@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+  <head lang="lv">
+      <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="LTPC" content="PD_16/17">
+      <meta name="ieskaite" content="WEB jtehnoloģijas">
+      <meta name="keywords" content="HTML, CSS, JS, PHP">
+      <meta name="author" content="Kristiāns Danoss">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+      <title>Ieskaites Darbs</title>
+
+      <script type="text/javascript"> /* Cookie for language variable */
+        window.onload = function(){
+          switch_lang(getCookie("language"));
+        }
+      </script>
+      <script type="text/javascript" src="js/language_cookie.js"></script> 
+      <script type="text/javascript" src="js/language_switch.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/styles.css" />
+ <!-- <link rel="stylesheet" type="text/css" href="css/media.css"  /> -->
+
+  </head>
+  <body>
+   
+    <div class="bg_img"></div>  <!-- background immage -->
+
+    <header>
+      <a href="index.html"><img src="img/logo_lat.png" alt="img.jpg" /></a>  
+      
+        <div class="navbar_dropdown">
+          <button onclick="myFunction()" class="dropbtn"><p class="mobil_izvelne">Izvēlne</p></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html"><div><strong>Jaunumi</strong></div></a></li>
+                <a href="index.html"><div><strong>Par mums</strong></div></a></li>
+                <a href="blogs.html"><div><strong>Blogs</strong></div></a></li>
+                <a href="index.html"><div><strong>Kontakti</strong></div></a></li>
+            </div>
+        </div>
+                            
+        <script>
+          function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+          }
+            function filterFunction() {
+              var input, filter, ul, li, a, i;
+                  input = document.getElementById("myInput");
+                  filter = input.value.toUpperCase();
+                  div = document.getElementById("myDropdown");
+                  a = div.getElementsByTagName("a");
+                    for (i = 0; i < a.length; i++) {
+                      if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                          a[i].style.display = "";
+                      } else {  
+                          a[i].style.display = "none";
+                        }
+                      }
+                    }
+        </script>	
+
+        <nav class="nav_top">
+          <ul>
+            <li>
+              <a href="index.html">
+                <p class="txt_NO">Nyheter</p>
+                <p class="txt_EN">News</p>
+                <p class="txt_LV">Jaunumi</p>
+              </a>
+            </li>
+            <li>
+              <a href="index.html">
+                <p class="txt_NO">Om oss</p>
+                <p class="txt_EN">About us</p>
+                <p class="txt_LV">Par mums</p>
+              </a>
+            </li>
+            <li>
+              <a href="blogs.php" class="active">
+                <p class="txt_NO">Blogger</p>
+                <p class="txt_EN">Blog</p>
+                <p class="txt_LV">Blogs</p>
+              </a>
+            </li>
+            <li>
+              <a href="index.html">
+                <p class="txt_NO">Kontakter</p>
+                <p class="txt_EN">Contact</p>
+                <p class="txt_LV">Kontakti</p>
+              </a>
+            </li>
+                
+            <li><input class="NO_btn" type="button" value="NO" onclick="switch_lang('NO')"></li>  <!-- js 'language_switch.js' -->
+            <li><input class="EN_btn" type="button" value="EN" onclick="switch_lang('EN')"></li>  <!-- js 'language_switch.js' -->
+            <li><input class="LV_btn" type="button" value="LV" onclick="switch_lang('LV')"></li>  <!-- js 'language_switch.js' -->
+          </ul>
+        </nav> 
+    </header>
+    <!-- content -->
+      <main>
+        <section class="section_index">   
+            <h1 class="txt_NO">Velkommen til vår nettside!</h1>
+            <h1 class="txt_EN">Welcome to our website!</h1>
+            <h1 class="txt_LV">Laipni lūgti mūsu mājaslapā!</h1>
+            <p class="txt_NO">Her kan du finne nyttig informasjon om programmering, de siste trendene i IT -bransjen.</p>
+            <p class="txt_EN">Here you can find useful information about programming, the latest trends in the IT industry.</p>
+            <p class="txt_LV">Šeit jūs varat atrast noderīgu informaciju par programmēšanu, jaunākajām tendencēm IT nozarē.</p>
+             
+    
+        </section>
+      </main>
+      <!-- REACT -->
+      <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+      <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+      <script             src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+      <footer>
+        <p class="footer_text"><small>Web lapas izstrādātājs: <strong>Kristiāns Danoss</strong> &copy 2021 Visas tiesības paturētas</small></p>
+      </footer>
+  </body>
+</html>

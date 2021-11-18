@@ -1,0 +1,58 @@
+/* *************************************** */
+/*        styles for FORM std::cout        */
+/* *************************************** */
+@charset "UTF-8";
+
+   /* .message_style {
+      text-align: center;
+      color: var(--white);
+    }*/
+
+    #title,
+    #subtitle,
+    #author,
+    #status { width: 50%; }
+
+    #content,
+    #submit { width: 100%; }
+
+    .form_header { 
+      margin: 0;
+      color: var(--blue); }
+
+    input[type=text], select, textarea {
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: var(--grey);
+    }
+
+    input[type=submit] {
+      background-color: var(--blue);
+      color: var(--white);
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    } 
+
+      input[type=submit]:hover {
+      background-color: var(--green);
+    }
+
+    .status_p {
+      display: inline;
+      color: var(--blue);
+    }
+
+    .form_input{
+      display: flex;
+      flex-direction: column;
+        width: 80%;
+      } form { 
+        display: flex;
+        flex-direction: column; } 

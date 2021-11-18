@@ -1,0 +1,36 @@
+/* ************************************** */
+/*        styles for PHP std::cout        */
+/* ************************************** */
+@charset "UTF-8";
+
+.article { 
+  display: flex;
+  flex-direction: column;
+    width: 60%;
+    height: auto;
+}
+
+  .article_h2 { 
+    /*font-weight: 700;*/
+    color: var(--green);
+    text-align: center;
+  } 
+
+  /*.article_h3 { }*/
+
+  .article_date_author {
+    font-size: 12px;
+    text-align: center;
+    transition: transform .4s;
+  }
+
+    .article_date_author:hover {
+      transform: scale(1.3);
+      transform-origin: 50% 50%;
+    }
+
+  .article_content {
+    text-align: justify;
+    text-justify: inter-word;
+    color: var(--blue);
+  }        

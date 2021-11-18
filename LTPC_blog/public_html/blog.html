@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+  <head lang="lv">
+      <meta charset="UTF-8">
+      <meta name="LTPC" content="PD_16/17">
+      <meta name="ieskaite" content="WEB jtehnoloģijas">
+      <meta name="keywords" content="HTML, CSS, JS, PHP">
+      <meta name="author" content="Kristiāns Danoss">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <title>Ieskaites Darbs</title>
+       
+        <script type="text/javascript"> /* Cookie for remeber language variant variable */
+          window.onload = function(){
+            switch_lang(getCookie("language"));
+          }
+        </script>     
+
+        <script type="text/javascript" src="js/language_cookie.js"></script> 
+        <script type="text/javascript" src="js/language_switch.js"></script> 
+        <script type="text/javascript" src="js/std_cout_console.js"></script>
+        <!-- <script type="text/javascript" src="js/language_text.js"></script>   -->
+        <!-- <script type="text/javascript" src="js/nav_mobile.js"></script> -->
+
+          <link rel="stylesheet" type="text/css" href="css/styles.css" />
+          <link rel="stylesheet" type="text/css" href="css/forms.css" />  <!-- 'forms.css' -->
+          <link rel="stylesheet" type="text/css" href="css/navigation.css" />
+          <!-- <link rel="stylesheet" type="text/css" href="css/mobile.css" media="only screen and (max-width:375px)" />
+          <link rel="stylesheet" type="text/css" href="css/table.css" media="only screen and (max-width:768px) and (min-width:376px)" /> -->
+          <link rel="stylesheet" type="text/css" href="css/dropdown.css" /> <!-- ma buttes -->
+
+  </head>
+  <body>
+    <!-- <div class="bg_img"></div>   background immage -->
+
+    <header>
+      <a href="index.html"><img src="img/logo_lat.png" alt="img.jpg" /></a>  
+      
+        <div class="navbar_dropdown">
+          <button onclick="myFunction()" class="dropbtn"><p class="mobil_izvelne">Izvēlne</p></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html"><div><strong>Jaunumi</strong></div></a></li>
+                <a href="index.html"><div><strong>Par mums</strong></div></a></li>
+                <a href="blogs.html"><div><strong>Blogs</strong></div></a></li>
+                <a href="index.html"><div><strong>Kontakti</strong></div></a></li>
+            </div>
+        </div>
+                            
+        <script>
+          function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+          }
+            function filterFunction() {
+              var input, filter, ul, li, a, i;
+                  input = document.getElementById("myInput");
+                  filter = input.value.toUpperCase();
+                  div = document.getElementById("myDropdown");
+                  a = div.getElementsByTagName("a");
+                    for (i = 0; i < a.length; i++) {
+                      if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                          a[i].style.display = "";
+                      } else {  
+                          a[i].style.display = "none";
+                        }
+                      }
+                    }
+        </script>	
+   
+       <nav class="nav_top">
+         <ul>
+            <li>
+              <a href="index.html">
+                <p class="txt_NO">Nyheter</p>
+                <p class="txt_EN">News</p>
+                <p class="txt_LV">Jaunumi</p>
+              </a>
+            </li>
+             <li>
+              <a href="index.html">
+                <p class="txt_NO">Om oss</p>
+                <p class="txt_EN">About us</p>
+                <p class="txt_LV">Par mums</p>
+              </a>
+            </li>
+            <li>
+              <a href="blogs.html" class="active">
+                <p class="txt_NO">Blogger</p>
+                <p class="txt_EN">Blog</p>
+                <p class="txt_LV">Blogs</p>
+              </a>
+            </li>
+            <li>
+              <a href="index.html">
+                <p class="txt_NO">Kontakter</p>
+                <p class="txt_EN">Contact</p>
+                <p class="txt_LV">Kontakti</p>
+              </a>
+            </li>
+               
+            <li><input class="NO_btn" type="button" value="NO" onclick="switch_lang('NO')"></li>  <!-- js 'language_switch.js' -->
+            <li><input class="EN_btn" type="button" value="EN" onclick="switch_lang('EN')"></li>  <!-- js 'language_switch.js' -->
+            <li><input class="LV_btn" type="button" value="LV" onclick="switch_lang('LV')"></li>  <!-- js 'language_switch.js' -->
+          </ul>
+        </nav> 
+        
+    </header>
+    <!-- content -->
+      <main class="main_blog">
+        <aside>
+          <h3>Opcijas</h3>
+          <ul>
+            <li>
+              <div>
+                <a href="blog.html"> <img src="img/add.png" alt="img" />
+                  <p class="txt_NO">Legg til en ny </p>
+                  <p class="txt_EN">Add a new</p>
+                  <p class="txt_LV">Pievienot jaunu</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="blog.html"> <img src="img/edit.png" alt="img" />
+                  <p class="txt_NO">Gjennomgå oppføringen</p>
+                  <p class="txt_EN">Review the entry</p> 
+                  <p class="txt_LV">Pārskatīt ierakstu</p>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </aside>  
+
+        <section class="section_blog">  
+            <h3 class="txt_NO">Blogginnleggsdetaljer</h3>
+            <h3 class="txt_EN">Blog post details</h3>
+            <h3 class="txt_LV">Bloga ieraksta detaļas</h3>
+
+  <!-- FORM -->
+ 
+  <div class="form_input">
+    <form action="php/MySQL_create_DB.php"  > <!-- method="post" -->
+
+      <label for="title">
+        <p class="form_header txt_NO">Tittle</p>
+        <p class="form_header txt_EN">Titel</p>
+        <p class="form_header txt_LV">Virsraksts</p>
+      </label>
+      <input type="text" id="title" name="title" placeholder="Virsraksts">
+
+
+
+
+  <script>
+    window.onload = function() { // NOLASA qwerty ni PHP :)
+       void std_cout_console();  // ! ! ! ! !
+    };
+  </script> 
+
+      <label for="subtitle">
+        <p class="form_header txt_NO">Teksting</p>
+        <p class="form_header txt_EN">Subtitle</p>
+        <p class="form_header txt_LV">Apakšvirsraksts</p>
+      </label>
+      <input type="text" id="subtitle" name="subtitle" placeholder="Apakšvirsraksts">
+
+      <label for="subtitle">
+        <p class="form_header txt_NO">Forfatter</p>
+        <p class="form_header txt_EN">Author</p>
+        <p class="form_header txt_LV">Autors</p>
+      </label>
+      <input type="text" id="author" name="author" placeholder="Autors">
+      
+      <label for="saturs">
+        <p class="form_header txt_NO">Innhold</p>
+        <p class="form_header txt_EN">Content</p>
+        <p class="form_header txt_LV">Saturs</p>
+      </label>
+      <textarea id="content" name="contentt" placeholder="Saturs" style="height:200px"></textarea>
+      
+      <label for="status">
+        <p class="form_header txt_NO">Status</p>
+        <p class="form_header txt_EN">Status</p>
+        <p class="form_header txt_LV">Statuss</p>
+      </label>
+      <select id="status" name="status">
+        <option>Izvēlies statusu</option>
+        <option value="privat">Privāts</option>
+        <option value="public">Publisks</option>
+      </select>
+    
+      <label for="status">
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      Publisks?</label>
+
+        <input id="submit" type="submit" value="Submit">
+    </form>
+  </div>
+
+        </section>
+      </main>
+    <!-- ------- -->
+      <footer>
+        <p class="footer_text"><small>Web lapas izstrādātājs: <strong>Kristiāns Danoss</strong> &copy 2021 Visas tiesības paturētas</small></p>
+      </footer>
+      <!-- REACT -->
+      <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+      <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+      <script             src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </body>
+</html>
