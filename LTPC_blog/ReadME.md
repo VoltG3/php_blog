@@ -1,5 +1,5 @@
 ## LTPC_Blog
-### Designed on localhost Apache2
+### Tested on localhost Apache2
 <br>
 
  **PHP/MySQL_create_DB.php** is for filling the database. Before that must editing **config.php**
@@ -15,4 +15,3 @@
     <td><img src="https://github.com/VoltG3/PHP_MySQL/blob/master/LTPC_blog/img/LTPC_blog_4.png" style ="width: aito;" alt="img"></td>
   <tr>
  </table>
-
