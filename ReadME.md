@@ -1,10 +1,31 @@
 ## LTPC_Blog
-### Tested on localhost Apache2
+### HTML / PHP / CRUD
 <br>
 
- **PHP/MySQL_create_DB.php** is for filling the database. Before that must editing **config.php**
- ___
-  
+### Requires
+ - Localhost  
+ - MySql
+ - phpMyAdmin
+
+### CRUD scripts
+Run this script to auto create and fill up database for test purpose
+```
+./php/MySQL_create_DB.php   
+```
+
+#### creation sequence
+```
+./php/MySQL_create_DB.php       - first
+./php/MySQL_create_TABLE.php    - next call
+./php/MySQL_insert_DATA.php     - next call
+
+```
+
+#### connection details
+```
+./config.php
+```
+
  <table>
   <tr>
     <td><img src="https://github.com/VoltG3/PHP_MySQL/blob/master/LTPC_blog/img/LTPC_blog_1.png" style ="width: auto;" alt="img"></td>
